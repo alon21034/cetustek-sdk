@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cetustek"
+version = "1.0.0"
+description = "Python SDK for Cetustek Taiwan e-invoice API"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Vince Lee" }
+]
+keywords = ["taiwan", "invoice", "e-invoice", "cetustek", "einvoice"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial",
+    "Typing :: Typed",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.25.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/vincelee888/cetustek"
+Repository = "https://github.com/vincelee888/cetustek"
+Issues = "https://github.com/vincelee888/cetustek/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cetustek"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
