@@ -63,9 +63,9 @@ try:
     result = client.createInvoice(CreateInvoiceInput(
         order_id="12345678",
         order_date="2026/01/15",
-        donate_mark="0",              # 0: No donation, 1: Donate, 2: Donate to NPO
-        invoice_type="07",            # 07: B2B, 08: B2C
-        tax_type="1",                 # 1: Taxable, 2: Zero-rated, 3: Tax-free
+        donate_mark="0",              # 0: 載具, 1 捐贈, 2:紙本
+        invoice_type="07",            # 07:一般稅額電子發票, 08:特種稅額電子發票
+        tax_type="1",                 # 1:應稅, 2:零稅率(非經海關出口使用), 3:免稅, 4:應稅(特種稅率), 5:零稅率(經海關出口使用), 9:混合(應稅、零稅率與免稅)
         pay_way="1",
         items=[InvoiceItem(
             production_code="PROD001",
