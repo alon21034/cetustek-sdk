@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "cetustek"
-version = "1.0.1"
+version = "1.0.2"
 description = "Python SDK for Cetustek Taiwan e-invoice API"
 readme = "README.md"
 license = "MIT"
@@ -40,7 +40,7 @@ dev = [
 [project.urls]
 Homepage = "https://github.com/alon21034/cetustek-sdk"
 Repository = "https://github.com/alon21034/cetustek-sdk"
-Issues = "https://github.com/alon21034/cetustek/issues"
+Issues = "https://github.com/alon21034/cetustek-sdk/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/cetustek"]
